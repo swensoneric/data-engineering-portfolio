@@ -10,7 +10,7 @@ from sqlalchemy import create_engine
 
 # ---------- CONFIG ----------
 DATA_DIR = "../data"
-DB_URI = "postgresql+psycopg2://username:password@localhost:5432/mydatabase"
+DB_URI = "postgresql+psycopg2://postgres:chewy@localhost:5432/venmo_data"
 TABLE_NAME = "excel_data"
 # ----------------------------
 
