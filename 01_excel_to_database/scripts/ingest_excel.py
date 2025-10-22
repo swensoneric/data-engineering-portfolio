@@ -9,8 +9,15 @@ import pandas as pd
 from sqlalchemy import create_engine
 
 # ---------- CONFIG ----------
+DB_USER = os.getenv("POSTGRES_USER", "postgres")
+DB_PASSWORD = os.getenv("POSTGRES_PASSWORD", "chewy")
+DB_HOST = os.getenv("POSTGRES_HOST", "localhost")
+DB_PORT = os.getenv("POSTGRES_PORT", "5432")
+DB_NAME = os.getenv("POSTGRES_DB", "venmo_data")
+
+DB_URI = f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+
 DATA_DIR = "../data"
-DB_URI = "postgresql+psycopg2://postgres:chewy@localhost:5432/venmo_data"
 TABLE_NAME = "excel_data"
 # ----------------------------
 
